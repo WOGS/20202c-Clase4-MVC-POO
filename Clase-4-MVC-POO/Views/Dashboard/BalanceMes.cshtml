@@ -1,0 +1,10 @@
+﻿@model Entidades.BalanceMes
+@{
+    ViewBag.Title = "BalanceMes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>BalanceMes</h2>
+<div>Mes: @Model.NombreMes</div>
+<div>Ingresos: <span style="color:green;">@Model.Ingresos</span></div>
+<div>Gastos: <span style="color:red;">@Model.Gastos</span></div>

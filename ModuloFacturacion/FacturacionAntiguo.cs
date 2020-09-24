@@ -1,9 +1,11 @@
-﻿using Entidades;
+﻿using ApiAntigua;
+using ApiNueva;
+using Entidades;
 using System;
 
 namespace ModuloFacturacion
 {
-    public class FacturacionAntiguo
+    public class FacturacionAntiguo : IFacturacion
     {
         string APIUsuario = "";
         string APIPassword = "";
@@ -24,6 +26,7 @@ namespace ModuloFacturacion
             balanceMes.Gastos = balanceAntiguo.GastosMantenimiento + balanceAntiguo.Impuestos;
             balanceMes.Ingresos = balanceAntiguo.IngresosLicencias + balanceAntiguo.Ventas;
             balanceMes.NombreMes = new DateTime(2020, mes, 1).ToString("MMMM");
+
             return balanceMes;
         }
 

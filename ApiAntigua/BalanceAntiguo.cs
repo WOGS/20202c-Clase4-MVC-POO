@@ -1,4 +1,4 @@
-﻿namespace ModuloFacturacion
+﻿namespace ApiAntigua
 {
     public class BalanceAntiguo
     {

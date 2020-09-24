@@ -12,10 +12,10 @@ namespace Servicios
 
         public BalanceMes ObtenerBalanceMes(int mes)
         {
-            var facturacionAntiguo = new FacturacionAntiguo();
-            //var facturacionAntiguo = new FacturacionNuevo();
+            //IFacturacion facturacion = new FacturacionAntiguo();
+            IFacturacion facturacion = new FacturacionNuevo();
 
-            return facturacionAntiguo.ObtenerBalanceDelMes(mes);
+            return facturacion.ObtenerBalanceDelMes(mes);
         }
       
     }

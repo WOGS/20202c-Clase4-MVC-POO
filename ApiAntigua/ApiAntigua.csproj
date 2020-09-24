@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1DDE2DFD-7F3E-4021-B22E-F7CB726B8E75}</ProjectGuid>
+    <ProjectGuid>{3DA8B837-781E-4B68-8813-8968407C1CE9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ModuloFacturacion</RootNamespace>
-    <AssemblyName>ModuloFacturacion</AssemblyName>
+    <RootNamespace>ApiAntigua</RootNamespace>
+    <AssemblyName>ApiAntigua</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,7 +32,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,24 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FacturacionAntiguo.cs" />
-    <Compile Include="FacturacionNuevo.cs" />
-    <Compile Include="IFacturacion.cs" />
+    <Compile Include="ApiSistemaFacturacionAntiguo.cs" />
+    <Compile Include="BalanceAntiguo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ApiAntigua\ApiAntigua.csproj">
-      <Project>{3DA8B837-781E-4B68-8813-8968407C1CE9}</Project>
-      <Name>ApiAntigua</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ApiNueva\ApiNueva.csproj">
-      <Project>{1272C490-CF92-40F9-9C04-5C3DD6CC7761}</Project>
-      <Name>ApiNueva</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{1cdbcc64-4ef6-4a33-86bf-174a5e7459e4}</Project>
-      <Name>Entidades</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,31 @@
+﻿@model List<Entidades.Gasto>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table>
+
+    <tr>
+        @*<th> @Html.DisplayNameFor(model => model[0].Id)</th>*@
+        <th> @Html.DisplayNameFor(model => model[0].Fecha)</th>
+        <th> @Html.DisplayNameFor(model => model[0].Descripcion)</th>
+        <th> @Html.DisplayNameFor(model => model[0].Monto)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>@Html.DisplayFor(m => item.Id)</td>*@
+            <td>@Html.DisplayFor(m => item.Fecha)</td>
+            <td>@Html.DisplayFor(m => item.Descripcion)</td>
+            <td>@Html.DisplayFor(m => item.Monto)</td>
+        </tr>
+    }
+
+    @Html.DropDownListFor(model => model[0].Id, new SelectList(Model, "Id", "Descripcion"));
+
+
+</table>
+

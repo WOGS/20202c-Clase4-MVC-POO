@@ -1,0 +1,17 @@
+﻿@model Entidades.Gasto
+
+@{
+    ViewBag.Title = "Alta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Alta</h2>
+@using (@Html.BeginForm())
+{
+    @Html.DisplayNameFor(model => model.Fecha); @Html.TextBoxFor(model => Model.Fecha, null, new { @class = "miclase", @type = "date" });
+    @Html.DisplayNameFor(model => model.Monto); @Html.EditorFor(model => Model.Monto);
+    @Html.DisplayNameFor(model => model.Descripcion); @Html.EditorFor(model => Model.Descripcion);
+    @Html.DisplayNameFor(model => model.Recurrente); @Html.CheckBoxFor(model => Model.Recurrente);
+
+    <input type="submit" value="Alta" />
+}
